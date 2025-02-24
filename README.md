@@ -36,3 +36,15 @@ Python is currently the go-to programming language for data scientists and engin
 In this article I show how the fast, safe and efficient Rust language, can be used from a Beam pipeline where an improvement of processing speed is needed. I hope that this article will help others like me which start to explore how can best use Rust in data engineering.
 
 https://medium.com/@florian.cartuta_89235/apache-beam-and-rust-made-for-each-other-2ba73eb48a66
+
+**Feature Generation with Apache Beam using Beam Sql and SqlTransform in Google Cloud Dataflow. Some practical aspects.**
+
+Apache Beam unifies batch and stream processing by creating bounded and unbounded PCollections in the same pipeline.
+
+From the feature generation perspective, using Apache Beam could bring some important advantages. Beam can generate features from both batch and streaming data, has high flexibility and can process large scale data due to parallel processing. It is not only about the possibility to code once and run on different platforms (as per its motto), but it also has built-in windowing processing, it can use the power of tensorflow transformer through tensorflow_transform.beam module, it has integration with tf.Records which is are highly optimized for TensorFlow through apache_beam.io.tfrecordio module, to name just a few.
+
+The tensorflow_transform.beam module allows to apply TensorFlow Transform preprocessing functions to data using Apache Beam’s data processing capabilities. It provides Beam PTransforms (data processing operations) that can be used within a Beam pipeline to perform data preprocessing using TensorFlow Transform.
+
+I tested so far various solutions for example Tensorflow Transform or the built-in windowing to create features like sliding window aggregates, but in the current post I will explain only how I used SqlTransform to generate features using plain SQL language. 
+
+https://medium.com/@florian.cartuta_89235/feature-generation-with-apache-beam-using-beam-sql-and-sqltransform-in-google-cloud-dataflow-653dd8033eaf
