@@ -10,3 +10,29 @@ The proposed method uses Truncated Singular Value Decomposition at its core, to 
 Benefits: The method is scalable, accurate, more processing time efficient than individual time-series forecasting and can be used to forecast very large number of time-series simultaneously.
 
 https://medium.com/@florian.cartuta_89235/multi-step-ahead-simultaneously-forecasting-for-multiple-time-series-using-truncated-singular-45de71e77468
+
+**Apache Beam and Rust: Made for each other**
+
+Apache Beam is an open-source, unified programming model for batch and streaming data processing pipelines that simplifies large-scale data processing dynamics.
+
+Well known advantages of Apache Beam are:
+
+- Can handle batch and streaming data with no need to write different logic separately;
+
+- Portability: the code can be migrated to any supported execution engine (runner).
+
+What happens when a specific part of our data processing pipeline hits the limit and needs to be as fast as possible?
+
+Rust is a systems programming language that has gained significant popularity among developers thanks to its emphasis on exceptional speed, memory safety, and productivity.
+
+Rust was initially created to solve two difficult problems:
+- How do you make systems programming safe?
+- How do you make concurrency painless?
+
+Beam currently does not support Rust SDK, but it support Python among others like Java, Go, Scala.
+
+Python is currently the go-to programming language for data scientists and engineers.
+
+In this article I show how the fast, safe and efficient Rust language, can be used from a Beam pipeline where an improvement of processing speed is needed. I hope that this article will help others like me which start to explore how can best use Rust in data engineering.
+
+https://medium.com/@florian.cartuta_89235/apache-beam-and-rust-made-for-each-other-2ba73eb48a66
